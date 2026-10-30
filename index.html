@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>컬러챰 이하니 | 이미지 브랜딩 강사 섭외</title>
+<meta name="description" content="퍼스널컬러·골격·얼굴타입 진단, 이미지메이킹·면접 이미지 강의와 박람회 부스 운영. 컬러챰 대표 이하니 강사 섭외 상담.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root{
+    --navy:#0B1426;
+    --navy-2:#131E35;
+    --navy-3:#1C2944;
+    --white:#FFFFFF;
+    --gray-bg:#F3F4F6;
+    --line:#E3E5EA;
+    --text:#1A1F2B;
+    --muted:#5D6575;
+    --purple:#4B2A6B;
+    --lavender:#EEE9F5;
+    --radius:14px;
+    --max:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--text);background:var(--white);line-height:1.65;word-break:keep-all;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  section{padding:96px 0}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.12em;color:var(--purple);text-transform:uppercase;margin-bottom:14px}
+  .dark .eyebrow{color:#B9A6D6}
+  h2{font-size:clamp(26px,3.4vw,38px);line-height:1.3;font-weight:700;letter-spacing:-.02em;margin-bottom:16px}
+  .lead{font-size:17px;color:var(--muted);max-width:640px}
+  .dark{background:var(--navy);color:var(--white)}
+  .dark .lead{color:#AEB6C6}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:16px;padding:16px 28px;border-radius:999px;transition:transform .15s,background .2s,box-shadow .2s;cursor:pointer;border:0;font-family:inherit}
+  .btn-primary{background:var(--white);color:var(--navy)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+  .btn-accent{background:var(--purple);color:var(--white)}
+  .btn-accent:hover{background:#5C3683;transform:translateY(-2px)}
+  .btn-ghost{color:var(--white);border:1px solid rgba(255,255,255,.3)}
+  .btn-ghost:hover{background:rgba(255,255,255,.08)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(11,20,38,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{color:var(--white);font-weight:700;letter-spacing:.18em;font-size:16px}
+  .logo span{font-weight:400;letter-spacing:0;color:#AEB6C6;margin-left:10px;font-size:13px}
+  .nav ul{display:flex;gap:28px;list-style:none}
+  .nav ul a{color:#C9CFDB;font-size:14px}
+  .nav ul a:hover{color:var(--white)}
+  .nav .btn{padding:10px 20px;font-size:14px}
+  @media(max-width:860px){.nav ul{display:none}}
+
+  /* hero */
+  .hero{padding:110px 0 90px;background:radial-gradient(1000px 500px at 85% 0%,rgba(75,42,107,.35),transparent 60%),var(--navy)}
+  .hero h1{font-size:clamp(34px,5.4vw,60px);line-height:1.2;font-weight:700;letter-spacing:-.03em;margin-bottom:24px}
+  .hero h1 em{font-style:normal;color:#C7B5E3}
+  .hero .lead{font-size:clamp(16px,1.8vw,19px);margin-bottom:38px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:72px;background:rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden}
+  .stat{background:var(--navy-2);padding:26px 22px}
+  .stat b{display:block;font-size:clamp(22px,2.6vw,30px);font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
+  .stat span{font-size:14px;color:#AEB6C6}
+  @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  /* who */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.grid-3,.grid-2{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:var(--white)}
+  .card h3{font-size:19px;font-weight:700;margin-bottom:10px;letter-spacing:-.01em}
+  .card p{color:var(--muted);font-size:15px}
+  .card .num{display:inline-flex;width:32px;height:32px;border-radius:50%;background:var(--lavender);color:var(--purple);font-weight:700;font-size:14px;align-items:center;justify-content:center;margin-bottom:16px}
+  .pain{margin-top:40px;padding:26px 30px;border-left:4px solid var(--purple);background:var(--gray-bg);border-radius:0 var(--radius) var(--radius) 0;font-size:18px;font-weight:600}
+  .pain small{display:block;font-weight:400;color:var(--muted);font-size:15px;margin-top:6px}
+
+  /* solution */
+  .solution{background:var(--gray-bg)}
+  .topic{display:flex;flex-direction:column;gap:8px}
+  .topic .tag{align-self:flex-start;font-size:12px;font-weight:600;color:var(--purple);background:var(--lavender);padding:4px 10px;border-radius:999px}
+  .formats{margin-top:56px}
+  .formats h3{font-size:20px;margin-bottom:18px}
+  .format{display:flex;gap:16px;align-items:flex-start;background:var(--white);border-radius:var(--radius);padding:22px 24px;border:1px solid var(--line)}
+  .format .ic{flex:0 0 44px;height:44px;border-radius:12px;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700}
+  .format h4{font-size:17px;margin-bottom:4px}
+  .format p{font-size:14px;color:var(--muted)}
+
+  /* proof */
+  .proof-top{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
+  @media(max-width:900px){.proof-top{grid-template-columns:1fr}}
+  .bignum{background:var(--navy-2);border-radius:var(--radius);padding:34px;border:1px solid rgba(255,255,255,.06)}
+  .bignum b{display:block;font-size:clamp(42px,6vw,64px);font-weight:700;letter-spacing:-.03em;line-height:1.1}
+  .bignum p{color:#AEB6C6;margin-top:8px}
+  .roles{list-style:none;margin-top:18px;display:grid;gap:10px}
+  .roles li{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px}
+  .roles li span{color:#AEB6C6;font-size:14px;white-space:nowrap}
+  .proof-block{margin-top:64px}
+  .proof-block h3{font-size:20px;margin-bottom:18px;font-weight:700}
+  .certs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:900px){.certs{grid-template-columns:1fr}}
+  .cert-group{background:var(--navy-2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:24px}
+  .cert-group h4{font-size:14px;color:#C7B5E3;margin-bottom:12px;font-weight:600;letter-spacing:.04em}
+  .cert-group ul{list-style:none;display:grid;gap:8px;font-size:15px}
+  .cert-group li.key{font-weight:700}
+  .cert-group li.key::after{content:"국가자격";font-size:11px;font-weight:600;margin-left:8px;padding:2px 7px;border-radius:999px;background:var(--purple);color:#fff;vertical-align:2px}
+  .cert-group li.jp::after{content:"정식 라이선스";font-size:11px;font-weight:600;margin-left:8px;padding:2px 7px;border-radius:999px;background:#2E3D5C;color:#fff;vertical-align:2px}
+  .clients{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:900px){.clients{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.clients{grid-template-columns:1fr}}
+  .client{background:var(--navy-2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:22px}
+  .client h4{font-size:13px;color:#C7B5E3;margin-bottom:12px;letter-spacing:.06em;font-weight:600}
+  .client ul{list-style:none;display:grid;gap:10px}
+  .client li{font-size:15px;font-weight:600}
+  .client li small{display:block;font-weight:400;font-size:13px;color:#9AA3B5;margin-top:2px}
+  .photos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:760px){.photos{grid-template-columns:repeat(2,1fr)}}
+  .ph{aspect-ratio:4/5;border-radius:12px;background:var(--navy-3);border:1px dashed rgba(255,255,255,.18);display:flex;align-items:flex-end;padding:14px;font-size:13px;color:#AEB6C6;overflow:hidden;position:relative}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .ph span{position:relative;z-index:1;background:rgba(11,20,38,.75);padding:4px 10px;border-radius:999px}
+  .insta{margin-top:20px;font-size:15px;color:#AEB6C6}
+  .insta a{color:var(--white);font-weight:600;border-bottom:1px solid rgba(255,255,255,.3)}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px;counter-reset:s}
+  @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.steps{grid-template-columns:1fr}}
+  .step{position:relative;padding:28px 24px;border-radius:var(--radius);border:1px solid var(--line)}
+  .step::before{counter-increment:s;content:"STEP " counter(s);display:block;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--purple);margin-bottom:14px}
+  .step h3{font-size:18px;margin-bottom:8px}
+  .step p{font-size:14px;color:var(--muted)}
+
+  /* faq */
+  .faq{background:var(--gray-bg)}
+  .faq-list{margin-top:40px;display:grid;gap:12px;max-width:820px}
+  details{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:0 24px}
+  summary{list-style:none;cursor:pointer;padding:22px 0;font-weight:600;font-size:17px;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:22px;line-height:1;color:var(--purple);transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding:0 0 22px;color:var(--muted);font-size:15px}
+
+  /* form */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+  .contact-info{list-style:none;margin-top:28px;display:grid;gap:14px}
+  .contact-info li{display:flex;gap:14px;font-size:15px}
+  .contact-info li b{min-width:64px;color:#C7B5E3;font-weight:600}
+  form{background:var(--white);color:var(--text);border-radius:18px;padding:34px}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+  .field label{font-size:14px;font-weight:600}
+  .field label i{font-style:normal;color:var(--purple)}
+  input,select,textarea{font-family:inherit;font-size:15px;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:#FAFBFC;color:var(--text);width:100%}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--purple);outline-offset:1px;background:#fff}
+  textarea{min-height:110px;resize:vertical}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.row{grid-template-columns:1fr}form{padding:24px}}
+  .agree{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);margin:6px 0 20px}
+  .agree input{width:auto;margin-top:3px}
+  form .btn{width:100%}
+  .form-note{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}
+
+  footer{background:#070D1A;color:#8A93A6;font-size:13px;padding:36px 0}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+  footer b{color:#C9CFDB}
+
+  .float-cta{position:fixed;right:20px;bottom:20px;z-index:60;box-shadow:0 10px 30px rgba(11,20,38,.35);display:none}
+  @media(max-width:860px){.float-cta{display:inline-flex}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">COLORCHARM<span>컬러챰 · 이하니</span></a>
+    <ul>
+      <li><a href="#who">이런 분께</a></li>
+      <li><a href="#solution">강의 분야</a></li>
+      <li><a href="#proof">경력·자격</a></li>
+      <li><a href="#process">진행 순서</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary">상담 신청</a>
+  </div>
+</header>
+
+<!-- 첫 화면 -->
+<section class="hero dark" id="top">
+  <div class="wrap">
+    <span class="eyebrow">이미지 브랜딩 강의 · 특강 · 박람회 부스</span>
+    <h1>강사 섭외,<br><em>경력으로 확인</em>하고 결정하세요</h1>
+    <p class="lead">퍼스널컬러·골격·얼굴타입 진단부터 이미지메이킹, 면접 이미지, 웨딩 퍼스널컬러까지. 대학·기업·학교·박람회 현장에서 검증된 컬러챰 대표 이하니입니다.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">상담 신청하기 →</a>
+      <a href="#proof" class="btn btn-ghost">경력 먼저 보기</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>15,000명+</b><span>1:1 진단 누적 고객</span></div>
+      <div class="stat"><b>2019년~</b><span>컬러챰 운영</span></div>
+      <div class="stat"><b>국가자격 2종</b><span>컬러리스트 산업기사 · 미용사(메이크업)</span></div>
+      <div class="stat"><b>협회 이사</b><span>한국감성색채협회 · 미래융합컬러교육협회</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 이런 분께 -->
+<section id="who">
+  <div class="wrap">
+    <span class="eyebrow">For you</span>
+    <h2>이런 분께 필요합니다</h2>
+    <p class="lead">이미지 관련 특강이나 부스를 맡길 강사를 찾고 계신 개인과 기관 담당자분들.</p>
+    <div class="grid-3">
+      <div class="card"><div class="num">1</div><h3>대학·고등학교 담당자</h3><p>취업·진로 특강, 면접 이미지메이킹, 학생 호감 이미지 강의가 필요한 경우</p></div>
+      <div class="card"><div class="num">2</div><h3>기업 교육·행사 담당자</h3><p>임직원 세미나, 협업 크리에이터 교육, 브랜드 클래스 연계 강의가 필요한 경우</p></div>
+      <div class="card"><div class="num">3</div><h3>박람회 주최·운영사</h3><p>웨딩·직업·취업·면접 박람회에서 진단 부스를 운영할 강사가 필요한 경우</p></div>
+      <div class="card"><div class="num">4</div><h3>공공기관·재단</h3><p>청소년 진로 체험, 지역 주민·참여자 대상 이미지 프로그램을 기획 중인 경우</p></div>
+      <div class="card"><div class="num">5</div><h3>백화점·뷰티 브랜드</h3><p>고객 대상 퍼스널컬러·골격 진단 컨설팅, 제품 연계 클래스가 필요한 경우</p></div>
+      <div class="card"><div class="num">6</div><h3>개인 의뢰</h3><p>소모임·스터디·행사에서 이미지 진단 특강을 열고 싶은 경우</p></div>
+    </div>
+    <div class="pain">"강사를 섭외해야 하는데, 누가 실력 있는 강사인지 판단하기 어렵다."
+      <small>그래서 이 페이지에 경력·자격·출강처·현장 사진을 한 번에 정리했습니다.</small>
+    </div>
+  </div>
+</section>
+
+<!-- 해결 방법 -->
+<section class="solution" id="solution">
+  <div class="wrap">
+    <span class="eyebrow">What I do</span>
+    <h2>대상과 상황에 맞춰 강의를 구성합니다</h2>
+    <p class="lead">진단 이론만 전달하지 않고, 참여자가 직접 진단받고 자기 이미지를 확인하는 실습형으로 진행합니다.</p>
+    <div class="grid-3">
+      <div class="card topic"><span class="tag">COLOR</span><h3>퍼스널컬러 진단</h3><p>드레이핑 진단으로 어울리는 색을 찾고, 메이크업·의상에 적용하는 방법까지</p></div>
+      <div class="card topic"><span class="tag">BODY</span><h3>골격 진단</h3><p>골격 유형에 따라 잘 맞는 실루엣·소재·스타일링 제안</p></div>
+      <div class="card topic"><span class="tag">FACE</span><h3>얼굴타입(얼굴형) 진단</h3><p>일본 얼굴타입진단협회 정식 1급 방법론 기반, 여성·남성 모두 진단</p></div>
+      <div class="card topic"><span class="tag">IMAGE</span><h3>이미지메이킹·브랜딩</h3><p>첫인상, 호감 이미지, 자기표현까지 나만의 이미지를 만드는 과정</p></div>
+      <div class="card topic"><span class="tag">INTERVIEW</span><h3>면접 이미지메이킹</h3><p>면접 복장·헤어·메이크업과 인상 관리, 취업 준비생 맞춤 구성</p></div>
+      <div class="card topic"><span class="tag">WEDDING</span><h3>웨딩 퍼스널컬러</h3><p>예비 신랑·신부 대상 드레스·턱시도·메이크업 컬러 진단</p></div>
+    </div>
+    <div class="formats">
+      <h3>운영 형태</h3>
+      <div class="grid-2">
+        <div class="format"><div class="ic">01</div><div><h4>1회 특강</h4><p>학교·기관·기업 세미나 등 단발 강의 (예: 연세대, 중앙대, 롯데홈쇼핑)</p></div></div>
+        <div class="format"><div class="ic">02</div><div><h4>연속 강의</h4><p>주차별로 이어지는 과정형 강의 (예: 한국공학대학교 주 1회 3주 연속)</p></div></div>
+        <div class="format"><div class="ic">03</div><div><h4>박람회·행사 진단 부스</h4><p>현장 방문객 대상 진단 부스 운영 (예: 섬유센터 웨딩박람회 총 5회, 한라대 취업박람회)</p></div></div>
+        <div class="format"><div class="ic">04</div><div><h4>1:1 컨설팅 연계</h4><p>개인별 진단·스타일링 컨설팅 (예: 현대백화점 목동점 진행 중)</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 믿을 근거 -->
+<section class="dark" id="proof">
+  <div class="wrap">
+    <span class="eyebrow">Why me</span>
+    <h2>믿고 맡길 수 있는 근거</h2>
+    <div class="proof-top">
+      <div>
+        <p class="lead">현장에서 직접 진단한 경험이 강의 내용의 깊이를 만듭니다. 2019년부터 컬러챰을 운영하며 개인 고객과 기업·기관을 만나 왔습니다.</p>
+        <ul class="roles">
+          <li>컬러챰 대표 <span>2019.06 – 현재</span></li>
+          <li>컬러챰 색채연구소 소장 <span>현재</span></li>
+          <li>한국감성색채협회 이사 <span>현재</span></li>
+          <li>미래융합컬러교육협회 이사 <span>현재</span></li>
+          <li>숭실대학교 대학원 이미지경영학과 <span>재학 중</span></li>
+        </ul>
+      </div>
+      <div class="bignum">
+        <b>15,000명+</b>
+        <p>컬러챰에서 직접 1:1로 진단한 누적 고객 수</p>
+      </div>
+    </div>
+
+    <div class="proof-block">
+      <h3>주요 자격</h3>
+      <div class="certs">
+        <div class="cert-group">
+          <h4>색채 · 퍼스널컬러</h4>
+          <ul>
+            <li class="key">컬러리스트 산업기사</li>
+            <li>퍼스널컬러 컨설턴트 1급</li>
+            <li>JPCA 색채기능 퍼스널컬러검정® 모듈 1, 2</li>
+            <li>색채심리상담사 1급</li>
+          </ul>
+        </div>
+        <div class="cert-group">
+          <h4>이미지 · 얼굴 · 골격</h4>
+          <ul>
+            <li class="jp">일본 얼굴타입 1급 (顔タイプ診断協会)</li>
+            <li class="jp">일본 얼굴타입 맨즈 1급</li>
+            <li>골격 진단 애널리스트 (アイシービー)</li>
+            <li>골격진단 컨설턴트 1급</li>
+            <li>이미지메이킹지도사 1급</li>
+          </ul>
+        </div>
+        <div class="cert-group">
+          <h4>뷰티 · 커뮤니케이션 · 스타일</h4>
+          <ul>
+            <li class="key">미용사(메이크업)</li>
+            <li>역량면접 컨설턴트 1급</li>
+            <li>패션스타일 디렉터 2급</li>
+            <li>메이크업포에버 아카데미 beauty master</li>
+            <li>ICBI framework hairstyling adviser</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-block">
+      <h3>주요 출강처</h3>
+      <div class="clients">
+        <div class="client"><h4>대학교</h4><ul>
+          <li>연세대학교<small>퍼스널컬러·자기 이미지 탐색 강의</small></li>
+          <li>중앙대학교<small>경영경제대학 퍼스널컬러 진단</small></li>
+          <li>한국공학대학교<small>면접 이미지메이킹 3주 연속 강의</small></li>
+          <li>한라대학교<small>커리어핏 취업박람회 부스</small></li>
+        </ul></div>
+        <div class="client"><h4>기업 · 브랜드</h4><ul>
+          <li>무신사 뷰티페스타<small>오드타입 클래스룸 연계 강의</small></li>
+          <li>롯데홈쇼핑<small>협업 크리에이터 대상 강의</small></li>
+          <li>현대백화점 목동점<small>개인별 진단 컨설팅 진행 중</small></li>
+          <li>굿노트 한국 세미나<small>해외 임직원 대상 진단</small></li>
+        </ul></div>
+        <div class="client"><h4>학교 · 공공기관</h4><ul>
+          <li>구미 도개고 · 춘천기계고<small>이미지메이킹·퍼스널컬러 강의</small></li>
+          <li>청주 IT과학고<small>취업박람회 진단 부스</small></li>
+          <li>광명시청소년재단<small>청소년 진로박람회 체험 부스</small></li>
+          <li>광명문화재단 · 경기도여성노동자복지센터<small>골격·얼굴형 진단, 이미지 강의</small></li>
+        </ul></div>
+        <div class="client"><h4>박람회 · 해외</h4><ul>
+          <li>섬유센터 웨딩박람회<small>웨딩 퍼스널컬러 총 5회</small></li>
+          <li>SETEC 웨딩박람회<small>예비 신랑·신부 진단</small></li>
+          <li>Sejong academy<small>미국 수학여행단 2년 연속</small></li>
+        </ul></div>
+      </div>
+    </div>
+
+    <div class="proof-block">
+      <h3>현장 사진</h3>
+      <!-- 사진 교체 방법: <div class="ph"> 안에 <img src="사진파일.jpg" alt="설명"> 를 넣으세요 -->
+      <div class="photos">
+        <div class="ph"><span>연세대학교 강의</span></div>
+        <div class="ph"><span>중앙대학교 진단</span></div>
+        <div class="ph"><span>무신사 뷰티페스타</span></div>
+        <div class="ph"><span>롯데홈쇼핑 클래스</span></div>
+        <div class="ph"><span>굿노트 세미나</span></div>
+        <div class="ph"><span>한라대 취업박람회</span></div>
+        <div class="ph"><span>광명문화재단</span></div>
+        <div class="ph"><span>Sejong academy</span></div>
+      </div>
+      <p class="insta">이미지 컨설팅 콘텐츠도 꾸준히 운영하고 있어요 → <a href="https://www.instagram.com/colorcharm_official" target="_blank" rel="noopener">@colorcharm_official</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 진행 순서 -->
+<section id="process">
+  <div class="wrap">
+    <span class="eyebrow">Process</span>
+    <h2>진행 순서</h2>
+    <p class="lead">상담 신청만 남겨 주시면, 행사에 맞는 구성을 함께 정리해 드립니다.</p>
+    <div class="steps">
+      <div class="step"><h3>상담 신청</h3><p>아래 폼에 행사 유형, 일정, 대상을 남겨 주세요.</p></div>
+      <div class="step"><h3>내용 확인</h3><p>대상·인원·시간·장소를 확인하고 진행 가능 여부를 안내드립니다.</p></div>
+      <div class="step"><h3>맞춤 구성 제안</h3><p>특강·연속 강의·부스 중 상황에 맞는 구성과 주제를 제안드립니다.</p></div>
+      <div class="step"><h3>현장 진행</h3><p>약속된 일정에 강의 또는 진단 부스를 진행합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <span class="eyebrow">FAQ</span>
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+      <details><summary>강의비는 어떻게 되나요?</summary><p>대상, 인원, 강의 시간, 장소, 운영 형태(특강·연속 강의·부스)에 따라 달라집니다. 상담 신청을 남겨 주시면 조건을 확인한 뒤 안내드립니다.</p></details>
+      <details><summary>서울 외 지역도 출강 가능한가요?</summary><p>네. 청주, 춘천, 구미, 원주 등 지역 학교·기관 출강 이력이 있습니다. 일정과 장소를 남겨 주시면 함께 조율하겠습니다.</p></details>
+      <details><summary>고등학생 대상 강의도 가능한가요?</summary><p>네. 고등학교 이미지메이킹 교육, 퍼스널컬러 진단, 얼굴 이미지에 따른 헤어스타일링 실습, 진로박람회 체험 부스 등을 진행해 왔습니다.</p></details>
+      <details><summary>남성 대상 진단도 하나요?</summary><p>네. 일본 얼굴타입 맨즈 1급을 보유하고 있으며, 면접 이미지메이킹과 웨딩박람회 예비 신랑 진단 등 남성 대상 진행 경험이 있습니다.</p></details>
+      <details><summary>외국인 대상으로도 진행할 수 있나요?</summary><p>굿노트 해외 임직원 세미나, 미국 수학여행단(Sejong academy) 진단 프로그램 등 외국인 대상 진행 이력이 있습니다. 대상 정보를 함께 알려 주세요.</p></details>
+      <details><summary>여러 회차로 이어지는 강의도 되나요?</summary><p>가능합니다. 한국공학대학교에서 주 1회, 3주 연속 강의를 진행했습니다. 원하시는 회차와 목표를 알려 주시면 구성안을 제안드립니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 신청 폼 -->
+<section class="dark" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Contact</span>
+      <h2>강의·부스 섭외<br>상담 신청</h2>
+      <p class="lead">행사 정보를 남겨 주시면 확인 후 연락드리겠습니다.</p>
+      <ul class="contact-info">
+        <li><b>강사</b>컬러챰 대표 이하니</li>
+        <li><b>이메일</b><a href="mailto:hanique@outlook.kr">hanique@outlook.kr</a></li>
+        <li><b>연락처</b><a href="tel:01090279043">010-9027-9043</a></li>
+        <li><b>인스타</b><a href="https://www.instagram.com/colorcharm_official" target="_blank" rel="noopener">@colorcharm_official</a></li>
+      </ul>
+    </div>
+    <form id="inquiry">
+      <div class="row">
+        <div class="field"><label for="name">담당자명 <i>*</i></label><input id="name" required placeholder="홍길동"></div>
+        <div class="field"><label for="org">기관·업체명</label><input id="org" placeholder="○○대학교 취업지원팀"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="phone">연락처 <i>*</i></label><input id="phone" type="tel" required placeholder="010-0000-0000"></div>
+        <div class="field"><label for="email">이메일</label><input id="email" type="email" placeholder="name@example.com"></div>
+      </div>
+      <div class="field"><label for="type">행사 유형 <i>*</i></label>
+        <select id="type" required>
+          <option value="">선택해 주세요</option>
+          <option>특강 (1회)</option>
+          <option>연속 강의</option>
+          <option>박람회·행사 진단 부스</option>
+          <option>기업·브랜드 세미나</option>
+          <option>1:1 컨설팅</option>
+          <option>기타</option>
+        </select>
+      </div>
+      <div class="row">
+        <div class="field"><label for="date">희망 일정</label><input id="date" placeholder="예: 11월 둘째 주 오후"></div>
+        <div class="field"><label for="people">예상 인원·대상</label><input id="people" placeholder="예: 대학생 40명"></div>
+      </div>
+      <div class="field"><label for="place">장소</label><input id="place" placeholder="예: 서울 ○○구 / 온라인"></div>
+      <div class="field"><label for="msg">문의 내용</label><textarea id="msg" placeholder="원하시는 주제나 요청사항을 자유롭게 적어 주세요."></textarea></div>
+      <label class="agree"><input type="checkbox" id="agree" required>상담 응대를 위한 개인정보(이름, 연락처, 이메일) 수집·이용에 동의합니다.</label>
+      <button type="submit" class="btn btn-accent">상담 신청하기</button>
+      <p class="form-note">남겨 주신 정보는 상담 응대에만 사용됩니다.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>COLORCHARM 컬러챰</b> · 대표 이하니 · hanique@outlook.kr</div>
+    <div>© 2026 Colorcharm. All rights reserved.</div>
+  </div>
+</footer>
+
+<a href="#contact" class="btn btn-accent float-cta">상담 신청</a>
+
+<script>
+  // ▼ 구글 Apps Script 웹 앱 URL을 아래 따옴표 안에 붙여 넣으세요
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbws_lrVZBJXf4o9c1Ua8okQQg1NA16zerQHvLRzYi331FF2ZoZNjStG1bF1iVp3DSJC/exec';
+
+  var form = document.getElementById('inquiry');
+  var btn = form.querySelector('button[type="submit"]');
+  var note = form.querySelector('.form-note');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = function(id){ return (document.getElementById(id).value || '').trim(); };
+    var data = new URLSearchParams({
+      name: v('name'), org: v('org'), phone: v('phone'), email: v('email'),
+      type: v('type'), date: v('date'), people: v('people'), place: v('place'), msg: v('msg')
+    });
+
+    btn.disabled = true;
+    btn.textContent = '보내는 중...';
+
+    fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data })
+      .then(function(){
+        form.reset();
+        btn.textContent = '신청 완료';
+        note.textContent = '상담 신청이 접수되었습니다. 확인 후 연락드리겠습니다.';
+        note.style.color = 'var(--purple)';
+        note.style.fontWeight = '600';
+      })
+      .catch(function(){
+        btn.disabled = false;
+        btn.textContent = '상담 신청하기';
+        note.textContent = '전송에 실패했어요. 잠시 후 다시 시도하거나 hanique@outlook.kr로 연락 주세요.';
+        note.style.color = '#C0392B';
+      });
+  });
+</script>
+</body>
+</html>
